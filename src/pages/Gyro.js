@@ -32,6 +32,12 @@ const Gyro = () => {
         });
     };
 
+    const handleVibrate = () => {
+        if("vibrate" in navigator) {
+            navigator.vibrate([1000, 200, 5000, 500, 8000, 500, 10000])
+        }
+    }
+
     return (
         <>
             <h1>Gyroskop</h1>
@@ -46,6 +52,9 @@ const Gyro = () => {
                     Enable on iPhone
                 </button>
             ) : null}
+
+
+            <button onClick={handleVibrate}>Vibrate me!</button>
         </>
     );
 };
