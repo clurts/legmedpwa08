@@ -3,6 +3,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import Location from "./pages/Location";
 import Gyro from "./pages/Gyro";
+import MyMap from "./pages/MyMap";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -10,6 +11,7 @@ export const router = createBrowserRouter(
             <Route index element={<Home />} />
             <Route path="/location" element={<Location />} />
             <Route path="/gyro" element={<Gyro />} />
+            <Route path="/map" element={<MyMap />} />
             
         </Route>
     )
