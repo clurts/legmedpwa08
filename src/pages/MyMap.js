@@ -1,4 +1,9 @@
 import { Map, NavigationControl, Marker, GeolocateControl } from "react-map-gl";
+import mapboxgl from "mapbox-gl";
+
+// eslint-disable import/no-webpack-loader-syntax
+mapboxgl.workerClass =
+    require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 const MyMap = () => {
     return (
